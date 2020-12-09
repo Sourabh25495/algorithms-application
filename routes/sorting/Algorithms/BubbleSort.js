@@ -2,7 +2,7 @@ const {performance} = require('perf_hooks');
 
 const bubbleSortAscending = (inputArray, lengthOfArray) => {
   let temp;
-  const startTime = performance.now()
+  const startTime = performance.now();
   for (let i = 0; i < lengthOfArray; i++) {
     for (let j = 0; j < lengthOfArray; j++) {
       if (inputArray[j] > inputArray[j+1]) {
@@ -12,19 +12,19 @@ const bubbleSortAscending = (inputArray, lengthOfArray) => {
       }
     }
   }
-  const endTime = performance.now()
+  const endTime = performance.now();
   
   return {
     startTime,
     endTime,
-    timeTaken: `${endTime - startTime} milliseconds` ,
+    timeTaken: `${endTime - startTime} milliseconds`,
     sortedArray: inputArray
   }
 }
 
 const bubbleSortDescending = (inputArray, lengthOfArray) => {
   let temp;
-  const startTime = performance.now()
+  const startTime = performance.now();
   for (let i = 0; i < lengthOfArray; i++) {
     for (let j = 0; j < lengthOfArray; j++) {
       if (inputArray[j] < inputArray[j+1]) {
@@ -34,12 +34,12 @@ const bubbleSortDescending = (inputArray, lengthOfArray) => {
       }
     }
   }
-  const endTime = performance.now()
+  const endTime = performance.now();
   
   return {
     startTime,
     endTime,
-    timeTaken: `${endTime - startTime} milliseconds` ,
+    timeTaken: `${endTime - startTime} milliseconds`,
     sortedArray: inputArray
   }
 }
