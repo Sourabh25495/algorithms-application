@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const {bubbleSort} = require('./Algorithms/BubbleSort');
+const {bubbleSort, selectionSort} = require('./Algorithms/BubbleSort');
 
-router.post('/bubble-sort', (req, res) => {
+router.use('/bubble-sort', (req, res) => {
   bubbleSort(req, res);
 });
 
-
-
-
+router.use('/selection-sort', (req, res) => {
+  bubbleSort(req, res);
+});
 
 module.exports = router;
