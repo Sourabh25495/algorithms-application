@@ -10,7 +10,7 @@ const linearSearchAlgorithm = (inputArray, searchFor, lengthOfArray) => {
   if (!hasDuplicates(inputArray)) {
     const startTime = performance.now();
     for (let i = 0; i < lengthOfArray; i++) {
-      if (inputArray[i] === searchFor)
+      if (inputArray[i] === searchFor) {
         endTime = performance.now();
         return {
           startTime,
@@ -18,6 +18,7 @@ const linearSearchAlgorithm = (inputArray, searchFor, lengthOfArray) => {
           timeTaken: `${endTime - startTime} milliseconds`,
           result: `${searchFor} found at index ${i}`
         };
+      };
     }
     endTime = performance.now();
     
