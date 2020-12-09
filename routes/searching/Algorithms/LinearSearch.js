@@ -11,10 +11,11 @@ const linearSearchAlgorithm = (inputArray, searchFor, lengthOfArray) => {
     const startTime = performance.now();
     for (let i = 0; i < lengthOfArray; i++) {
       if (inputArray[i] === searchFor)
+        endTime = performance.now();
         return {
           startTime,
-          endTime: performance.now(),
-          timeTaken: `${performance.now() - startTime} milliseconds`,
+          endTime,
+          timeTaken: `${endTime - startTime} milliseconds`,
           result: `${searchFor} found at index ${i}`
         };
     }
